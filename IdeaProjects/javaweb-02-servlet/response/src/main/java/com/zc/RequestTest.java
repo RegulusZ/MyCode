@@ -1,25 +1,26 @@
-package com.zc.servlet;
+package com.zc;
 
-import javax.naming.Context;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Properties;
 
-public class ContextInitParam extends HttpServlet {
+//重定向，用户登录
+public class RequestTest extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
-        ServletContext servletContext = this.getServletContext();
+        System.out.println("进入这个请求");
+        //处理请求
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
 
-        String database = servletContext.getInitParameter("database");
+        System.out.println(username + ":" + password);
 
-        resp.getWriter().print(database);
+        //重定向的时候一定要注意路径问题
+        resp.sendRedirect("/success.jsp");
 
-//        Properties   可以配置资源
     }
 
     @Override

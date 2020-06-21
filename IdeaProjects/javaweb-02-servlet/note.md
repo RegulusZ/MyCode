@@ -7,25 +7,6 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-<!--    注册servlet-->
-    <servlet>
-        <servlet-name>hello</servlet-name>
-        <servlet-class>com.zc.servlet.HelloServlet</servlet-class>
-    </servlet>
-<!--    servlet请求路径-->
-    <servlet-mapping>
-        <servlet-name>hello</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>error</servlet-name>
-        <servlet-class>com.zc.servlet.ErrorServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>error</servlet-name>
-        <url-pattern>/*</url-pattern>
-    </servlet-mapping>
 
 </web-app>
 
