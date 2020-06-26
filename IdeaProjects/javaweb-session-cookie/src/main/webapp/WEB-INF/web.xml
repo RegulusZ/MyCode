@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>CookieDemo1</servlet-name>
-        <servlet-class>com.zc.CookieDemo1</servlet-class>
+        <servlet-class>com.zc.servlet.CookieDemo1</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CookieDemo1</servlet-name>
@@ -17,11 +17,44 @@
 
     <servlet>
         <servlet-name>CookieDemo3</servlet-name>
-        <servlet-class>com.zc.CookieDemo03</servlet-class>
+        <servlet-class>com.zc.servlet.CookieDemo03</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CookieDemo3</servlet-name>
         <url-pattern>/c3</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionDemo01</servlet-name>
+        <servlet-class>com.zc.servlet.SessionDemo01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionDemo01</servlet-name>
+        <url-pattern>/s1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionDemo02</servlet-name>
+        <servlet-class>com.zc.servlet.SessionDemo02</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionDemo02</servlet-name>
+        <url-pattern>/s2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionDemo03</servlet-name>
+        <servlet-class>com.zc.servlet.SessionDemo03</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionDemo03</servlet-name>
+        <url-pattern>/s3</url-pattern>
+    </servlet-mapping>
+
+<!--    设置session默认的失效时间-->
+    <session-config>
+<!--        1分钟后session自动失效，以分钟为单位-->
+        <session-timeout>1</session-timeout>
+    </session-config>
     
 </web-app>
